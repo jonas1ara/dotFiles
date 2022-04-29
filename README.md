@@ -11,6 +11,10 @@ _Estos archivos te permitirán tener tu configuración de vim y tmux como la mí
 
 _Clona este repositorio y muevete dentro de él_
 
+```
+git clone https://github.com/Jonas-Lara/dotFiles.git
+```
+
 _Corre el script Config.sh (Leelo antés)_
 
 ```
