@@ -6,6 +6,7 @@ _Estos archivos te permitirán tener tu configuración de vim y tmux como la mí
 
 * [Vim](https://www.vim.org/)
 * [Tmux](https://github.com/tmux/tmux/wiki)
+* [Windows Subsystem for Linux](https://docs.microsoft.com/es-mx/windows/wsl/)
 
 ## Instalación 
 
