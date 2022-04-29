@@ -1,6 +1,6 @@
 # dotFILES
 
-_Estos archivos te permitirán tener tu configuración de vim y tmux como la mía 😁_
+_Estos archivos te permitirán tener tu configuración en Unix para trabajar con los repositorios tengo en mi perfil 😁 (Lo uso en WSl pero funciona en Linux)_
 
 ## Requisitos
 
