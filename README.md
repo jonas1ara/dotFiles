@@ -5,7 +5,17 @@ _Estos archivos te permitirán tener tu configuración de vim y tmux como la mí
 ## Requisitos
 
 * [Vim](https://www.vim.org/)
-* [Tmux](https://github.com/tmux/tmux/wiki)  
+* [Tmux](https://github.com/tmux/tmux/wiki)
+
+## Instalación 
+
+_Clona este repositorio y muevete dentro de él_
+
+_Corre el script Config.sh (Leelo antés)_
+
+```
+bash ./Config.sh
+```
 
 ### Resultado final 🚀
 
