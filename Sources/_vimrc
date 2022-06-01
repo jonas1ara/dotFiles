@@ -17,8 +17,7 @@ set ff=unix
 set paste
 set rnu
 
-" store backup, undo, and swap files in temp directory
-" set directory=$HOME/temp//
+" Almacenar archivos de copia de seguridad, deshacer e intercambiar en el directorio temporal
 set backupdir=$HOME/temp//
 set undodir=$HOME/temp//
 
