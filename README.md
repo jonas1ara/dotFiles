@@ -22,11 +22,6 @@ _Corre el script Config.sh (Leelo antés)_
 bash ./Config.sh
 ```
 
-```
-# reload config file (change file location to your the tmux.conf you want to use)
-bind r source-file ~/.tmux.conf
-```
-
 ### Resultado final 🚀
 
 _Ubuntu en WSL2_

@@ -1,10 +1,21 @@
 #!/bin/bash
 
 echo "Este script configura tu máquina con esta configuración de vim y tmux"
+echo " "
+
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+
+sudo apt install vim tmux
 
 
-sudo apt update && sudo apt upgrade -y
+echo " "
+echo "$(cat _tmux.conf)" |  sudo tee  ~/.tmux.conf
 
-sudo apt install cmake make gdb unzip curl tmux vim mono-devel python3 python3-pip clang build-essential -y
+# reload config file (change file location to your the tmux.conf you want to use)
+bind r source-file ~/.tmux.conf
 
+
+echo " "
+echo "$(cat _vimrc)" | sudo tee ~/.vimrc
+echo " "
 
