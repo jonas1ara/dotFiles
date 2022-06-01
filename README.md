@@ -1,6 +1,6 @@
 # dotFILES
 
-_Estos archivos te permitirán tener tu configuración de tmux y vim minimalista y usable 😁 (Lo uso en WSl pero por supuesto que funciona en Linux)_
+_Estos archivos te permitirán tener tu configuración de tmux y vim minimalista y usable 😁 (Lo uso en WSL pero por supuesto que funciona en Linux)_
 
 ## Requisitos
 
