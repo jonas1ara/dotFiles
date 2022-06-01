@@ -26,7 +26,7 @@ bash ./Config.sh
 
 _Ubuntu en WSL2_
 
-<img src=/Captures/WSL.png alt="Linux"/>
+<img src=/Sources/WSL.png alt="Linux"/>
 
 ## Construido con 🛠️
 

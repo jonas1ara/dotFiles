@@ -9,13 +9,13 @@ sudo apt install vim tmux
 
 
 echo " "
-echo "$(cat _tmux.conf)" |  sudo tee  ~/.tmux.conf
+echo "$(cat Sources/_tmux.conf)" |  sudo tee  ~/.tmux.conf
 
 # reload config file (change file location to your the tmux.conf you want to use)
 bind r source-file ~/.tmux.conf
 
 
 echo " "
-echo "$(cat _vimrc)" | sudo tee ~/.vimrc
+echo "$(cat Sources/_vimrc)" | sudo tee ~/.vimrc
 echo " "
 
