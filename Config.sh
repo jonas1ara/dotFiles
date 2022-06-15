@@ -5,7 +5,7 @@ echo " "
 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
-sudo apt install vim tmux
+sudo apt install vim tmux -y
 
 
 echo " "
