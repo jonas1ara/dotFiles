@@ -1,35 +1,35 @@
 # dotFILES
 
-_Estos archivos te permitirán tener tu configuración de tmux y vim minimalista y usable 😁 (Lo uso en WSL pero por supuesto que funciona en Linux)_
+_These files will allow you to have your tmux and vim setup minimal and usable 😁 (I use it on WSL but of course it works on Linux)_
 
-## Requisitos
+## Requirements
 
 * [Vim](https://www.vim.org/)
 * [Tmux](https://github.com/tmux/tmux/wiki)
 * [Windows Subsystem for Linux](https://docs.microsoft.com/es-mx/windows/wsl/)
 
-## Instalación 
+## Installation 
 
-_Clona este repositorio y muevete dentro de él_
+_Clone this repository and move into it_
 
 ```
 git clone https://github.com/Jonas-Lara/dotFiles.git
 ```
 
-_Corre el script Config.sh (Leelo antés)_
+_Run the Config.sh script (read it first)_
 
 ```
 bash ./Config.sh
 ```
 
-### Resultado final 🚀
+### Final 🚀
 
-_Ubuntu en WSL2_
+_Ubuntu on WSL2_
 
 <img src=/Sources/WSL.png alt="Linux"/>
 
-## Construido con 🛠️
+## Build with 🛠️
 
-* [Terminal de Windows](https://docs.microsoft.com/en-us/windows/terminal/) - La terminal de Windows
-* [Subsistema de Windows para Linux](https://docs.microsoft.com/es-mx/windows/wsl/) - Subsistema de Windows para Linux
+* [Windows terminal](https://docs.microsoft.com/en-us/windows/terminal/) - Windows terminal
+* [Windows subsystem for Linux](https://docs.microsoft.com/es-mx/windows/wsl/) - Windows subsistem for Linux
 
