@@ -1,4 +1,4 @@
-"""""""""""""""" Ajustes generales de vim """"""""""""""""""""""""""
+"""""""""""""""" General vim settings """"""""""""""""""""""""""
 " Vi compatible
 
 syntax on
@@ -17,11 +17,11 @@ set ff=unix
 set paste
 set rnu
 
-" Almacenar archivos de copia de seguridad, deshacer e intercambiar en el directorio temporal
+" Store backup, undo, and swap files in the temporary directory
 set backupdir=$HOME/temp//
 set undodir=$HOME/temp//
 
-"""""""""""" Final de ajustes generales"""""""""""""""
+"""""""""""" End of general settings """""""""""""""
 
 
 
