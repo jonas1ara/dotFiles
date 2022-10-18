@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Este script configura tu máquina con esta configuración de vim y tmux"
+echo "This script configures your machine with these vim and tmux settings"
 echo " "
 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
