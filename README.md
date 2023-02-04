@@ -16,10 +16,10 @@ _Clone this repository and move into it_
 git clone https://github.com/Jonas-Lara/dotFiles.git
 ```
 
-_Run the Config.sh script (read it first)_
+_Run the Setup.sh script (read it first)_
 
 ```
-bash ./dotFiles/Setup.sh
+./Setup.sh
 ```
 
 ### Final 🚀
