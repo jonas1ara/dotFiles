@@ -3,7 +3,7 @@
 
 syntax on
 set encoding=utf-8
-set background=dark
+" set background=dark
 set shiftwidth=4
 set mouse+=a 
 set expandtab
