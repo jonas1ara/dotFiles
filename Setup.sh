@@ -21,5 +21,5 @@ bind r source-file ~/.tmux.conf
 
 
 echo " "
-echo "$(cat Sources/_vimrc2)" | sudo tee ~/.vimrc
+echo "$(cat Sources/_vimrc)" | sudo tee ~/.vimrc
 echo " "
