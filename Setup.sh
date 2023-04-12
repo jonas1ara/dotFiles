@@ -7,6 +7,11 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 sudo apt install vim tmux -y
 
+echo "Install vim plug"
+echo " "
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo " "
 echo "$(cat Sources/_tmux.conf)" |  sudo tee  ~/.tmux.conf

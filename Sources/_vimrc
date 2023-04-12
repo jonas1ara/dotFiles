@@ -20,5 +20,13 @@ set rnu
 """""""""""" End of general settings """""""""""""""
 
 
+"""""""""""" Start vim-plug settings """""""""""""""
+
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+
+call plug#end()
 
 
+"""""""""""" End vim-plug settings """""""""""""""
