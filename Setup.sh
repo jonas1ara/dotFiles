@@ -17,7 +17,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "Install FSharp autocomplete"
 echo " "
 
-dotnet tool install -g fsautocomplete
+# dotnet tool install -g fsautocomplete
 
 echo " "
 echo "$(cat Sources/_tmux.conf)" |  sudo tee  ~/.tmux.conf
