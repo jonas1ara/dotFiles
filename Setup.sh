@@ -5,7 +5,12 @@ echo " "
 
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
-sudo apt install vim tmux -y
+sudo apt install curl vim tmux -y
+
+echo "Install oh my bash"
+echo " "
+
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 echo "Install vim plug"
 echo " "
