@@ -19,7 +19,7 @@ git clone https://github.com/Jonas-Lara/dotFiles.git
 _Run the Setup.sh script (read it first)_
 
 ```
-./Setup.sh
+cd dotFiles && ./Setup.sh
 ```
 
 ### Final 🚀
