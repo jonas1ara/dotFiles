@@ -15,6 +15,10 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
+"NERDTree 
+
+Plug 'preservim/nerdtree'
+
 " Mappings, code-actions available flag and statusline integration
 Plug 'nickspoons/vim-sharpenup'
 
@@ -49,6 +53,9 @@ filetype indent plugin on
 if !exists('g:syntax_on') | syntax enable | endif
 set encoding=utf-8
 scriptencoding utf-8
+
+nnoremap <C-n> :NERDTree<CR>
+nmap <c-s> :w<CR>
 
 
 set completeopt=menuone,noinsert,noselect,popuphidden
