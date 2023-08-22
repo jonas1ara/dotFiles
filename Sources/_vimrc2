@@ -15,7 +15,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
-"NERDTree 
+" NERDTree 
 
 Plug 'preservim/nerdtree'
 
@@ -54,7 +54,8 @@ if !exists('g:syntax_on') | syntax enable | endif
 set encoding=utf-8
 scriptencoding utf-8
 
-nnoremap <C-n> :NERDTree<CR>
+nmap <C-n> :NERDTree<CR>
+nmap <C-f> :NERDTreeToggle<CR>
 nmap <c-s> :w<CR>
 
 
