@@ -56,8 +56,10 @@ scriptencoding utf-8
 
 nmap <C-n> :NERDTree<CR>
 nmap <C-f> :NERDTreeToggle<CR>
-nmap <c-s> :w<CR>
-
+nmap <C-s> :w<CR>
+nmap <C-a> ggVG<CR>
+nmap <C-c> "+y<CR>
+nmap <C-x> ggVG"+y<CR>
 
 set completeopt=menuone,noinsert,noselect,popuphidden
 set completepopup=highlight:Pmenu,border:off
