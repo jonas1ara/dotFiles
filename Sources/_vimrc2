@@ -13,6 +13,7 @@ Plug 'ionide/Ionide-vim'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
+    \ 'do': 'powershell -ExecutionPolicy Unrestricted .\install.ps1',
     \ }
 
 " NERDTree 
