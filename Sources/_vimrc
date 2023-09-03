@@ -19,6 +19,13 @@ set rnu
 
 """""""""""" End of general settings """""""""""""""
 
+nmap <C-n> :NERDTree<CR>
+nmap <C-f> :NERDTreeToggle<CR>
+nmap <C-s> :w<CR>
+nmap <C-a> ggVG<CR>
+nmap <C-c> "+y<CR>
+nmap <C-x> ggVG"+y<CR>
+
 
 """""""""""" Start vim-plug settings """""""""""""""
 
