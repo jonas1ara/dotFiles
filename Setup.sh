@@ -15,14 +15,14 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 echo "Install vim plug"
 echo " "
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     
     
 echo "Install FSharp autocomplete"
 echo " "
 
-# dotnet tool install -g fsautocomplete
+dotnet tool install -g fsautocomplete
 
 echo " "
 echo "$(cat Sources/_tmux.conf)" |  sudo tee  ~/.tmux.conf
@@ -30,7 +30,8 @@ echo "$(cat Sources/_tmux.conf)" |  sudo tee  ~/.tmux.conf
 # reload config file (change file location to your the tmux.conf you want to use)
 bind r source-file ~/.tmux.conf
 
+mkdir ~/.config/neovim && touch ~/.config/neovi/init.vim 
 
 echo " "
-echo "$(cat Sources/_vimrc2)" | sudo tee ~/.vimrc
+echo "$(cat Sources/_vimrc)" | sudo tee ~/.config/neovim/init.vim
 echo " "
