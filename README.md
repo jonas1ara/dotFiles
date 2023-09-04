@@ -4,8 +4,8 @@ _These files will allow you to have your tmux and vim setup minimal and usable ð
 
 ## Requirements
 
-* [Neovim](https://neovim.io/)
 * [Tmux](https://github.com/tmux/tmux/wiki)
+* [Neovim](https://neovim.io/)
 * [Windows Subsystem for Linux](https://docs.microsoft.com/es-mx/windows/wsl/)
 
 ## Installation 
