@@ -30,7 +30,7 @@ echo "$(cat Sources/_tmux.conf)" |  sudo tee  ~/.tmux.conf
 # reload config file (change file location to your the tmux.conf you want to use)
 bind r source-file ~/.tmux.conf
 
-mkdir ~/.config/neovim && touch ~/.config/neovi/init.vim 
+mkdir ~/.config/neovim && touch ~/.config/neovim/init.vim 
 
 echo " "
 echo "$(cat Sources/_vimrc)" | sudo tee ~/.config/neovim/init.vim
