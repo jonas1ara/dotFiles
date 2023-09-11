@@ -4,7 +4,7 @@ _These files will allow you to have your tmux and vim setup minimal and usable ð
 
 ## Requirements
 
-* [Vim](https://neovim.io/](https://www.vim.org/)
+* [Vim](https://www.vim.org/)
 * [Tmux](https://github.com/tmux/tmux/wiki)
 * [Ubuntu](https://ubuntu.com/)
 
