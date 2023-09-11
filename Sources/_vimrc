@@ -1,11 +1,70 @@
-"""""""""""""""" General vim settings """"""""""""""""""""""""""
-" Vi compatible
+" Set this to 1 to use ultisnips for snippet handling
+let s:using_snippets = 0
+
+" vim-plug: {{{
+call plug#begin('~/.vim/plugged')
+
+Plug 'OmniSharp/omnisharp-vim'
+
+" FSharp support
+
+Plug 'ionide/Ionide-vim'
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+" NERDTree 
+
+Plug 'preservim/nerdtree'
+
+" Mappings, code-actions available flag and statusline integration
+Plug 'nickspoons/vim-sharpenup'
+
+" Linting/error highlighting
+Plug 'dense-analysis/ale'
+
+" Vim FZF integration, used as OmniSharp selector
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
+" Autocompletion
+Plug 'prabirshrestha/asyncomplete.vim'
+
+" Colorscheme
+Plug 'gruvbox-community/gruvbox'
+
+" Statusline
+Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'maximbaz/lightline-ale'
+
+" Snippet support
+if s:using_snippets
+  Plug 'sirver/ultisnips'
+endif
+
+call plug#end()
+" }}}
+
+" Settings: {{{
+filetype indent plugin on
+if !exists('g:syntax_on') | syntax enable | endif
+set encoding=utf-8
+scriptencoding utf-8
+
+nmap <C-n> :NERDTree<CR>
+nmap <C-f> :NERDTreeToggle<CR>
+nmap <C-s> :w<CR>
+nmap <C-e> :q<CR>
+nmap <C-a> ggVG<CR>
+nmap <C-c> "+y<CR>
+nmap <C-x> ggVG"+y<CR>
+
 
 syntax on
-set encoding=utf-8
-" set background=dark
 set shiftwidth=4
-set mouse+=a 
 set expandtab
 set tabstop=4
 set cursorline
@@ -16,24 +75,47 @@ set number
 set ff=unix
 set paste
 set rnu
+set textwidth=80
+set title
 
-"""""""""""" End of general settings """""""""""""""
+set hidden
+set nofixendofline
+set nostartofline
+set splitbelow
+set splitright
 
-nmap <C-n> :NERDTree<CR>
-nmap <C-f> :NERDTreeToggle<CR>
-nmap <C-s> :w<CR>
-nmap <C-a> ggVG<CR>
-nmap <C-c> "+y<CR>
-nmap <C-x> ggVG"+y<CR>
+set hlsearch
+set incsearch
+set laststatus=2
+set nonumber
+set noruler
+set noshowmode
+set signcolumn=yes
 
+set mouse=a
+set updatetime=1000
+" }}}
 
-"""""""""""" Start vim-plug settings """""""""""""""
+" Colors: {{{
+augroup ColorschemePreferences
+  autocmd!
+  " These preferences clear some gruvbox background colours, allowing transparency
+  autocmd ColorScheme * highlight Normal     ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight Todo       ctermbg=NONE guibg=NONE
+  " Link ALE sign highlights to similar equivalents without background colours
+  autocmd ColorScheme * highlight link ALEErrorSign   WarningMsg
+  autocmd ColorScheme * highlight link ALEWarningSign ModeMsg
+  autocmd ColorScheme * highlight link ALEInfoSign    Identifier
+augroup END
 
-call plug#begin()
+" Use truecolor in the terminal, when it is supported
+if has('termguicolors')
+  set termguicolors
+endif
 
-Plug 'tpope/vim-sensible'
+" set background=dark
+colorscheme gruvbox
+" }}}
 
-call plug#end()
-
-
-"""""""""""" End vim-plug settings """""""""""""""
+let g:OmniSharp_server_use_net6 = 1
