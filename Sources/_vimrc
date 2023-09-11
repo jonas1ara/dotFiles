@@ -48,6 +48,8 @@ endif
 call plug#end()
 " }}}
 
+let g:OmniSharp_server_use_net6 = 1
+
 " Settings: {{{
 filetype indent plugin on
 if !exists('g:syntax_on') | syntax enable | endif
@@ -118,4 +120,3 @@ endif
 colorscheme gruvbox
 " }}}
 
-let g:OmniSharp_server_use_net6 = 1

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "This script configures your machine with these vim and tmux settings"
+echo " "
+echo "This script configures your machine with these vim and tmux settings for .NET development"
 echo " "
 
 sudo apt update 
@@ -8,32 +9,32 @@ sudo apt update
 sudo apt install curl vim tmux libuv1-dev -y
 
 echo " "
-echo "Install oh my bash"
+echo "Installing oh my bash ..."
 echo " "
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 echo " "
-echo "Install vim plug"
+echo "Installing vim plug ..."
 echo " "
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim    
     
 echo " "
-echo "Install fsharp autocomplete"
+echo "Installing fsharp autocomplete ..."
 echo " "
 
 dotnet tool install -g fsautocomplete
 
 echo " "
-echo "Configuring the clipboard in vim"
+echo "Configuring the clipboard in vim ..."
 echo " "
 
-./CopyPasteVim.sh
+sudo ./Sources/CopyPasteVim.sh
 
 echo " "
-echo "Configuring .tmux.conf and .vimrc"
+echo "Configuring .tmux.conf and .vimrc ..."
 echo " "
 echo "$(cat Sources/_tmux.conf)" |  sudo tee  ~/.tmux.conf
 
@@ -45,6 +46,6 @@ echo "$(cat Sources/_vimrc)" | sudo tee ~/.vimrc
 echo " "
 
 echo " "
-echo "Your vim and tmux has been successfully configured"
+echo "Your vim and tmux has been successfully configured ..."
 echo " "
 

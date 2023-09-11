@@ -1,17 +1,22 @@
+echo " "
 vim --version | grep clipboard
+echo " "
 
-sudo apt-get install vim-gtk3
+apt-get install vim-gtk3 -y
 
-sudo apt-get purge vim-common
+apt-get purge vim-common -y
 
-sudo apt install vim
+apt install vim -y
 
-sudo apt-get purge vim-runtime
+apt-get purge vim-runtime -y
 
-sudo apt install vim
+apt install vim vim-gtk -y
 
-sudo apt install vim-gtk
+apt autoremove -y
 
+echo " "
+vim --version | grep clipboard
+echo " "
 
 
 
