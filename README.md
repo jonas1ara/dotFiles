@@ -31,5 +31,5 @@ _Ubuntu on WSL2_
 ## Build with 🛠️
 
 * [Ubuntu](https://ubuntu.com/) - Ubuntu
-* [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) - Windows Subsystem for Linux
+* [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) - WSL
 
