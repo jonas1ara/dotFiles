@@ -31,5 +31,5 @@ _Ubuntu on WSL2_
 ## Build with 🛠️
 
 * [Ubuntu](https://ubuntu.com/) - Ubuntu
-* [GNOME terminal](https://help.gnome.org/users/gnome-terminal/stable/) - GNOME terminal
+* [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) - Windows Subsystem for Linux
 
