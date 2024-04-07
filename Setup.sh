@@ -20,6 +20,11 @@ echo " "
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim    
+
+
+## Neovim on Windows 
+# iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+  #  ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
     
 echo " "
 echo "Installing fsharp autocomplete ..."
