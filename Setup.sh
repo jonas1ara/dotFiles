@@ -6,26 +6,15 @@ echo " "
 
 sudo apt update 
 
-sudo apt install curl vim tmux libuv1-dev -y
+sudo apt install curl neovim tmux -y
 
 echo " "
-echo "Installing oh my bash ..."
+echo "Installing vim plug for neovim ..."
 echo " "
 
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-echo " "
-echo "Installing vim plug ..."
-echo " "
-
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim    
-
-
-## Neovim on Windows 
-# iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-  #  ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
-    
 echo " "
 echo "Installing fsharp autocomplete ..."
 echo " "
@@ -33,24 +22,20 @@ echo " "
 dotnet tool install -g fsautocomplete
 
 echo " "
-echo "Configuring the clipboard in vim ..."
-echo " "
-
-sudo ./Sources/CopyPasteVim.sh
-
-echo " "
-echo "Configuring .tmux.conf and .vimrc ..."
+echo "Configuring .tmux.conf and .init.vim ..."
 echo " "
 echo "$(cat Sources/_tmux.conf)" |  sudo tee  ~/.tmux.conf
 
 # reload config file (change file location to your the tmux.conf you want to use)
 bind r source-file ~/.tmux.conf
 
+mkdir ~/.config/nvim
+
 echo " "
-echo "$(cat Sources/_vimrc)" | sudo tee ~/.vimrc
+echo "$(cat Sources/_init.vim)" | sudo tee ~/.config/nvim/init.vim
 echo " "
 
 echo " "
-echo "Your vim and tmux has been successfully configured ..."
+echo "Your neovim and tmux has been successfully configured ..."
 echo " "
 
