@@ -26,7 +26,7 @@ cd dotFiles && ./Setup.sh
 
 _Ubuntu on WSL2_
 
-<img src=/Sources/WSL.png alt="Linux"/>
+<img src=/Sources/WSL.gif alt="Linux"/>
 
 ## Build with 🛠️
 
