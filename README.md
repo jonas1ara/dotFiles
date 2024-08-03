@@ -16,6 +16,8 @@ _PowerShell on Windows 11 (Believe me, if it works on Windows it works on Unix/L
 
 ### Windows
 
+> **Note:** Tmux is not available on Windows. For similar functionality, consider using alternatives like Windows Terminal or ConEmu.
+
 * [Scoop](https://scoop.sh/) - Windows package manager
 * [Neovim](https://neovim.io/) - Advanced Vim-based text editor
 * [.NET SDK](https://dotnet.microsoft.com/) - .NET development tools
