@@ -2,7 +2,7 @@
 
 _These files provide a minimal and efficient setup for developing with C# and F# using Neovim and F# autocomplete. This configuration is compatible with Windows, WSL, and Linux environments, making it versatile for various development setups! 😁_
 
-<img src=/Sources/fsharp-neovim.gif alt="Fsharp in neovim"/>
+<img src=/src/fsharp-neovim.gif alt="Fsharp in neovim"/>
 
 _PowerShell on Windows 11 (Believe me, if it works on Windows it works on Unix/Linux)_
 
