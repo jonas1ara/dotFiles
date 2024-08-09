@@ -1,4 +1,4 @@
-# dotFILES
+# dotFILES 🖥️
 
 _These files provide a minimal and efficient setup for developing with C# and F# using Neovim and F# autocomplete. This configuration is compatible with Windows, WSL, and Linux environments, making it versatile for various development setups! 😁_
 
