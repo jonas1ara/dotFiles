@@ -8,7 +8,7 @@ _PowerShell on Windows 11 (Believe me, if it works on Windows it works on Unix/L
 
 ## Requirements
 
-### Linux (Ubuntu, WSL)
+### Linux (Desktop or WSL)
 
 * [Vim](https://www.vim.org/)
 * [Tmux](https://github.com/tmux/tmux/wiki)
