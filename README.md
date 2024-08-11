@@ -10,9 +10,9 @@ _PowerShell on Windows 11 (Believe me, if it works on Windows it works on Unix/L
 
 ### Linux (Desktop or WSL)
 
-* [Vim](https://www.vim.org/)
-* [Tmux](https://github.com/tmux/tmux/wiki)
-* [Ubuntu](https://ubuntu.com/)
+* [Vim](https://www.vim.org/) - A versatile text editor for coding
+* [Tmux](https://github.com/tmux/tmux/wiki) - Terminal multiplexer for managing sessions (only available on Unix/Linux)
+* [Ubuntu](https://ubuntu.com/) - A widely used Linux distribution.
 
 ### Windows
 
