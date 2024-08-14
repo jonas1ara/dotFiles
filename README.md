@@ -25,7 +25,7 @@ _PowerShell on Windows 11 (Believe me, if it works on Windows it works on Unix/L
 
 ## Installation
 
-### Linux (Debian or Ubuntu)
+### Linux (Ubuntu or Fedora)
 
 _Clone this repository and move into it:_
 
