@@ -61,6 +61,7 @@ cd dotFiles && ./Setup.ps1
 ## Build with 🛠️
 
 * [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) - WSL
+* [Fedora](https://fedoraproject.org/) - Fedora
 * [Ubuntu](https://ubuntu.com/) - Ubuntu
 * [Scoop](https://scoop.sh/) - Windows package manager
 * [Neovim](https://neovim.io/) - Neovim text editor
