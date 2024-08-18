@@ -6,7 +6,7 @@ _These files provide a minimal and efficient setup for developing with C# and F#
 
 _PowerShell on Windows 11 (Believe me, if it works on Windows it works on Unix/Linux)_
 
-## Requirements
+## Requirements 📦
 
 ### Linux (Desktop or WSL)
 
@@ -23,7 +23,7 @@ _PowerShell on Windows 11 (Believe me, if it works on Windows it works on Unix/L
 * [Neovim](https://neovim.io/) - Advanced Vim-based text editor
 * [.NET SDK](https://dotnet.microsoft.com/) - .NET development tools
 
-## Installation
+## Installation 🚀
 
 ### Linux (Ubuntu or Fedora)
 
