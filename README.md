@@ -1,6 +1,6 @@
 # dotFILES 🖥️
 
-_These files provide a minimal and efficient setup for developing with C# and F# using Neovim, this configuration is compatible with Windows, WSL, and Linux environments, making it versatile for various development setups! 😁_
+_These files provide a minimal and efficient setup for developing with C# and F# using Neovim, this configuration is compatible with Windows, WSL and Linux Desktop, making it versatile for various development setups! 😁_
 
 <img src=/src/fsharp-neovim.gif alt="Fsharp in neovim"/>
 
