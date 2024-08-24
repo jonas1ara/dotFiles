@@ -35,7 +35,7 @@ git clone https://github.com/jonas1ara/dotFiles.git
 
 _Run the Setup.sh script (read it first):_
 ```
-cd dotFiles && ./Setup.sh
+cd dotFiles/src/scripts && ./Setup.sh
 ```
 
 ### Windows
@@ -55,7 +55,7 @@ git clone https://github.com/jonas1ara/dotFiles.git
 
 _Run the Setup.sh script (read it first):_
 ```
-cd dotFiles && ./Setup.ps1
+cd dotFiles\src\scripts && .\Setup.ps1
 ```
 
 ## Build with 🛠️
