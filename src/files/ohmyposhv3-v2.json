@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "horizontal_offset": 0,
+      "segments": [
+        {
+          "background": "#ff479c",
+          "foreground": "#ffffff",
+          "invert_powerline": false,
+          "leading_diamond": "",
+          "powerline_symbol": "",
+          "properties": {
+            "prefix": "  ",
+            "style": "folder"
+          },
+          "style": "diamond",
+          "trailing_diamond": "",
+          "type": "path"
+        },
+        {
+          "background": "#fffb38",
+          "foreground": "#193549",
+          "invert_powerline": false,
+          "leading_diamond": "",
+          "powerline_symbol": "",
+          "properties": {
+            "display_stash_count": true,
+            "display_status": true,
+            "display_upstream_icon": true
+          },
+          "style": "powerline",
+          "trailing_diamond": "",
+          "type": "git"
+        },
+        {
+          "background": "#6CA35E",
+          "foreground": "#ffffff",
+          "invert_powerline": false,
+          "leading_diamond": "",
+          "powerline_symbol": "",
+          "properties": {
+            "display_version": true,
+            "prefix": "  "
+          },
+          "style": "powerline",
+          "trailing_diamond": "",
+          "type": "dotnet"
+        },
+        {
+          "background": "#ffff66",
+          "foreground": "#ffffff",
+          "invert_powerline": false,
+          "leading_diamond": "",
+          "powerline_symbol": "",
+          "properties": null,
+          "style": "powerline",
+          "trailing_diamond": "",
+          "type": "root"
+        },
+        {
+          "background": "#2e9599",
+          "foreground": "#ffffff",
+          "invert_powerline": false,
+          "leading_diamond": "",
+          "powerline_symbol": "",
+          "properties": {
+            "always_enabled": true,
+            "color_background": true,
+            "display_exit_code": false,
+            "error_color": "#f1184c",
+            "prefix": " "
+          },
+          "style": "powerline",
+          "trailing_diamond": "",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt",
+      "vertical_offset": 0
+    }
+  ],
+  "console_title": true,
+  "console_title_style": "folder",
+  "final_space": true
+}
+

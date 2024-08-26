@@ -53,7 +53,7 @@ _Then, clone this repository and move into it:_
 git clone https://github.com/jonas1ara/dotFiles.git
 ```
 
-_Run the Setup.sh script (read it first):_
+_Run the Setup.ps1 script (read it first):_
 ```
 cd dotFiles\src\scripts && .\Setup.ps1
 ```
