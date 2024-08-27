@@ -26,122 +26,27 @@ if (-not (Test-Path $profilePath)) {
     New-Item -Path $profilePath -ItemType File -Force
 }
 
-# Configurar el perfil
-@"
-Import-Module posh-git
-Import-Module oh-my-posh
-Import-Module -Name Terminal-Icons
+# Configurar el perfil desde el archivo en la carpeta 'files'
+$filesDir = "$PSScriptRoot\..\files"  # Ajusta la ruta según la estructura de tu proyecto
 
-Set-PoshPrompt -Theme $HOME\Documents\PowerShell\ohmyposhv3-v2.json
-Export-PoshTheme -FilePath $HOME\Documents\PowerShell\ohmyposhv3-v2.json -Format json
+$profileSource = Join-Path -Path $filesDir -ChildPath "Microsoft.PowerShell_profile.ps1"
 
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-    Import-Module "$ChocolateyProfile"
+if (Test-Path $profileSource) {
+    Copy-Item -Path $profileSource -Destination $profilePath -Force
+} else {
+    Write-Host "El archivo de perfil no se encuentra en la carpeta 'files'."
 }
-
-# Alias
-Set-Alias vim nvim
-Set-Alias ll ls
-Set-Alias g git
-Set-Alias d dotnet
-Set-Alias c cls
-Set-Alias grep findstr
-"@ | Set-Content $profilePath -Force
 
 # Crear el archivo de configuración ohmyposhv3-v2.json
 $jsonPath = "$HOME\Documents\PowerShell\ohmyposhv3-v2.json"
+$jsonSource = Join-Path -Path $filesDir -ChildPath "ohmyposhv3-v2.json"
 
 if (-not (Test-Path $jsonPath)) {
-    @"
-{
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "blocks": [
-    {
-      "alignment": "left",
-      "horizontal_offset": 0,
-      "segments": [
-        {
-          "background": "#ff479c",
-          "foreground": "#ffffff",
-          "invert_powerline": false,
-          "leading_diamond": "",
-          "powerline_symbol": "",
-          "properties": {
-            "prefix": "  ",
-            "style": "folder"
-          },
-          "style": "diamond",
-          "trailing_diamond": "",
-          "type": "path"
-        },
-        {
-          "background": "#fffb38",
-          "foreground": "#193549",
-          "invert_powerline": false,
-          "leading_diamond": "",
-          "powerline_symbol": "",
-          "properties": {
-            "display_stash_count": true,
-            "display_status": true,
-            "display_upstream_icon": true
-          },
-          "style": "powerline",
-          "trailing_diamond": "",
-          "type": "git"
-        },
-        {
-          "background": "#6CA35E",
-          "foreground": "#ffffff",
-          "invert_powerline": false,
-          "leading_diamond": "",
-          "powerline_symbol": "",
-          "properties": {
-            "display_version": true,
-            "prefix": "  "
-          },
-          "style": "powerline",
-          "trailing_diamond": "",
-          "type": "dotnet"
-        },
-        {
-          "background": "#ffff66",
-          "foreground": "#ffffff",
-          "invert_powerline": false,
-          "leading_diamond": "",
-          "powerline_symbol": "",
-          "properties": null,
-          "style": "powerline",
-          "trailing_diamond": "",
-          "type": "root"
-        },
-        {
-          "background": "#2e9599",
-          "foreground": "#ffffff",
-          "invert_powerline": false,
-          "leading_diamond": "",
-          "powerline_symbol": "",
-          "properties": {
-            "always_enabled": true,
-            "color_background": true,
-            "display_exit_code": false,
-            "error_color": "#f1184c",
-            "prefix": " "
-          },
-          "style": "powerline",
-          "trailing_diamond": "",
-          "type": "exit"
-        }
-      ],
-      "type": "prompt",
-      "vertical_offset": 0
+    if (Test-Path $jsonSource) {
+        Copy-Item -Path $jsonSource -Destination $jsonPath -Force
+    } else {
+        Write-Host "El archivo JSON de oh-my-posh no se encuentra en la carpeta 'files'."
     }
-  ],
-  "console_title": true,
-  "console_title_style": "folder",
-  "final_space": true
-}
-"@ | Set-Content $jsonPath -Force
 }
 
 Write-Host "La configuración de la terminal se ha completado. Por favor, reinicia PowerShell para aplicar los cambios."
