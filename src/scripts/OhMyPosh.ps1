@@ -28,11 +28,11 @@ if (-not (Test-Path $profilePath)) {
 
 # Configurar el perfil desde el archivo en la carpeta 'files'
 $filesDir = "$PSScriptRoot\..\files"  # Ajusta la ruta según la estructura de tu proyecto
-
 $profileSource = Join-Path -Path $filesDir -ChildPath "Microsoft.PowerShell_profile.ps1"
 
 if (Test-Path $profileSource) {
-    Copy-Item -Path $profileSource -Destination $profilePath -Force
+    $sourceProfile = Get-Content $profileSource -Raw
+    $sourceProfile | Set-Content $profilePath -Force
 } else {
     Write-Host "El archivo de perfil no se encuentra en la carpeta 'files'."
 }
