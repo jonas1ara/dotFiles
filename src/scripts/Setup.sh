@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo " "
-echo "This script configures your machine with Neovim and F# autocomplete settings for .NET development"
+echo "This script setup neovim for developing with C# and F# from terminal"
 echo " "
 
 # Detect the OS
