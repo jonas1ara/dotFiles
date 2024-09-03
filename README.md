@@ -33,9 +33,15 @@ _Clone this repository and move into it:_
 git clone https://github.com/jonas1ara/dotFiles.git
 ```
 
-_Run the Setup.sh script (read it first):_
+_Make sure to make the script have execution permissions:_
+
+```bash
+cd dotFiles/src/scripts && chmod +x Setup.sh
 ```
-cd dotFiles/src/scripts && ./Setup.sh
+
+_Run the Setup.sh script:_
+```
+./Setup.sh
 ```
 
 ### Windows
@@ -53,7 +59,7 @@ _Then, clone this repository and move into it:_
 git clone https://github.com/jonas1ara/dotFiles.git
 ```
 
-_Run the Setup.ps1 script (read it first):_
+_Run the Setup.ps1 script:_
 ```
 cd dotFiles\src\scripts && .\Setup.ps1
 ```
