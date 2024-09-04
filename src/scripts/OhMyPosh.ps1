@@ -1,53 +1,70 @@
-# setup_terminal.ps1
+# OhMyPosh.ps1
 
-# Verificar si winget está instalado
+# Check if winget is installed
+
 if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
-    Write-Host "winget no está instalado. Asegúrate de tenerlo disponible."
+    Write-Host "Winget are not installed, make sure you have it available."
     exit
 }
 
-# Instalar PowerShell
-winget install --id Microsoft.Powershell --source winget -y
+# Install PowerShell
 
-# Instalar Scoop si no está instalado
+winget install --id Microsoft.Powershell --source winget
+
+# Install Scoop if it is not installed 
+
 if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
     iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 }
 
-# Agregar el bucket de nerd-fonts y instalar Cascadia Code
+# Add the nerd-fonts bucket and install Cascadia Code
+
 scoop bucket add nerd-fonts
 scoop install Cascadia-Code
 
-# Crear o modificar el archivo Microsoft.PowerShell_profile
+# Create or modify the file Microsoft.PowerShell_profile
+
 $profilePath = "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 
 if (-not (Test-Path $profilePath)) {
     New-Item -Path $profilePath -ItemType File -Force
 }
 
-# Configurar el perfil desde el archivo en la carpeta 'files'
-$filesDir = "$PSScriptRoot\..\files"  # Ajusta la ruta según la estructura de tu proyecto
+# Configure the profile from the file in the 'files' folder
+
+$filesDir = Join-Path -Path $PSScriptRoot -ChildPath "..\files"
+$filesDir = Resolve-Path $filesDir
+
 $profileSource = Join-Path -Path $filesDir -ChildPath "Microsoft.PowerShell_profile.ps1"
 
 if (Test-Path $profileSource) {
     $sourceProfile = Get-Content $profileSource -Raw
     $sourceProfile | Set-Content $profilePath -Force
 } else {
-    Write-Host "El archivo de perfil no se encuentra en la carpeta 'files'."
+    Write-Error "The profile file is not located in the 'files' folder. Check the route: $profileSource"
 }
 
-# Crear el archivo de configuración ohmyposhv3-v2.json
+# Create the configuration file ohmyposhv3-v2.json
+
 $jsonPath = "$HOME\Documents\PowerShell\ohmyposhv3-v2.json"
 $jsonSource = Join-Path -Path $filesDir -ChildPath "ohmyposhv3-v2.json"
 
 if (-not (Test-Path $jsonPath)) {
     if (Test-Path $jsonSource) {
         Copy-Item -Path $jsonSource -Destination $jsonPath -Force
+        Write-Host "File ohmyposhv3-v2.json successfully copied"
     } else {
-        Write-Host "El archivo JSON de oh-my-posh no se encuentra en la carpeta 'files'."
+        Write-Error "Oh-my-posh's JSON file is not in the 'files' folder. Check the route: $jsonSource"
     }
 }
 
-Write-Host "La configuración de la terminal se ha completado. Por favor, reinicia PowerShell para aplicar los cambios."
+# Check if oh-my-posh is installed and configure it
+
+if (-not (Get-Command oh-my-posh -ErrorAction SilentlyContinue)) {
+    Write-Host "oh-my-posh is not installed. Installing it now..."
+    winget install --id JanDeDobbeleer.OhMyPosh --source winget
+}
+
+Write-Host "Terminal setup with Oh My Posh successfully completed!"
 
