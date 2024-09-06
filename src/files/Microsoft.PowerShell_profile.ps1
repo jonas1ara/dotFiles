@@ -5,7 +5,8 @@ Import-Module -Name Terminal-Icons
 Set-PoshPrompt -Theme "$HOME\Documents\PowerShell\ohmyposhv3-v2.json"
 Export-PoshTheme -FilePath "$HOME\Documents\PowerShell\ohmyposhv3-v2.json" -Format json
 
-# Importar el perfil de Chocolatey
+# Import Chocolatey Profile
+
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
