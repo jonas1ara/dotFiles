@@ -1,16 +1,20 @@
 #!/bin/bash
 
 echo " "
-echo "This script setup neovim for developing with C# and F# from terminal"
+echo "This script sets up Neovim for developing with C# and F# from the terminal"
 echo " "
 
-# Detect the OS
+# Obtener el directorio donde está el script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+FILES_DIR="$SCRIPT_DIR/../files"
+
+# Detectar el sistema operativo
 if [ -f /etc/debian_version ]; then
-    # For Ubuntu
+    # Para Ubuntu
     sudo apt update 
     sudo apt install curl neovim tmux -y
 elif [ -f /etc/fedora-release ]; then
-    # For Fedora
+    # Para Fedora
     sudo dnf install curl neovim tmux -y
 else
     echo "Unsupported operating system. Please use Ubuntu or Fedora."
@@ -31,24 +35,26 @@ echo " "
 dotnet tool install -g fsautocomplete
 
 echo " "
-echo "Configuring .tmux.conf and .init.vim ..."
+echo "Configuring .tmux.conf and init.vim ..."
 echo " "
 
-# Create the .tmux.conf file
-if [ -f Sources/_tmux.conf ]; then
-    cat Sources/_tmux.conf | sudo tee ~/.tmux.conf
+# Crear el archivo .tmux.conf
+TMUX_CONF_PATH="$FILES_DIR/_tmux.conf"
+if [ -f "$TMUX_CONF_PATH" ]; then
+    cat "$TMUX_CONF_PATH" | sudo tee ~/.tmux.conf
 else
     echo "Source file for .tmux.conf not found."
 fi
 
-# Reload config file command (for Tmux, user needs to run this manually)
+# Comando para recargar el archivo de configuración de Tmux
 echo "To reload the Tmux configuration, run: 'tmux source-file ~/.tmux.conf'"
 
 mkdir -p ~/.config/nvim
 
 echo " "
-if [ -f Sources/_init.vim ]; then
-    cat Sources/_init.vim | sudo tee ~/.config/nvim/init.vim
+INIT_VIM_PATH="$FILES_DIR/_init.vim"
+if [ -f "$INIT_VIM_PATH" ]; then
+    cat "$INIT_VIM_PATH" | sudo tee ~/.config/nvim/init.vim
 else
     echo "Source file for init.vim not found."
 fi
@@ -57,4 +63,3 @@ echo " "
 echo " "
 echo "Your Neovim and Tmux have been successfully configured ..."
 echo " "
-

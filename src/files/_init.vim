@@ -123,4 +123,3 @@ endif
 " Set the background color scheme
 colorscheme gruvbox
 " }}}
-
