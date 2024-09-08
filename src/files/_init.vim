@@ -13,7 +13,7 @@ Plug 'ionide/Ionide-vim'
 " LanguageClient-neovim for LSP support
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
-    \ 'do': 'bash install.sh',  " Install the LanguageClient
+    \ 'do': 'bash install.sh',
     \ }
 
 " NERDTree for file exploration
@@ -104,7 +104,7 @@ set updatetime=1000  " Time in milliseconds to wait before triggering updates
 
 " Colors: {{{
 augroup ColorschemePreferences
-  autocmd!  " Clear previous autocmds
+  autocmd! 
   " Clear some gruvbox background colors for transparency
   autocmd ColorScheme * highlight Normal     ctermbg=NONE guibg=NONE
   autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
@@ -123,3 +123,4 @@ endif
 " Set the background color scheme
 colorscheme gruvbox
 " }}}
+
