@@ -36,12 +36,12 @@ git clone https://github.com/jonas1ara/dotFiles.git
 _Make sure to make the script have execution permissions:_
 
 ```bash
-cd dotFiles/src/scripts && chmod +x Setup.sh
+cd dotFiles/src/scripts && chmod +x Neovim.sh
 ```
 
 _Run the Setup.sh script:_
 ```
-./Setup.sh
+./Neovim.sh
 ```
 
 ### Windows
@@ -61,7 +61,7 @@ git clone https://github.com/jonas1ara/dotFiles.git
 
 _Run the Setup.ps1 script:_
 ```
-cd dotFiles\src\scripts && .\Setup.ps1
+cd dotFiles\src\scripts && .\Neovim.ps1
 ```
 
 ## Build with 🛠️
