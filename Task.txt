@@ -1,0 +1,26 @@
+[] Neovim.ps1 -> _initW.vim
+[] Neovim.sh -> _initL.vim
+
+Why?
+
+# Windows 
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'powershell -ExecutionPolicy Unrestricted .\install.ps1',
+    \ }
+
+# Linux
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+README.md
+
+[] Tell more about oh my posh and vim using C#
+[] Tell more about Linux vim and tmux
+
+
+
+
