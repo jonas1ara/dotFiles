@@ -66,6 +66,9 @@ nmap <C-a> ggVG<CR>  " Select all text with Ctrl+a
 nmap <C-c> "+y<CR>  " Copy selected text to clipboard with Ctrl+c
 nmap <C-x> ggVG"+y<CR>  " Copy all text to clipboard with Ctrl+x
 
+" :sp -> terminal
+" :vsp -> terminal
+
 syntax on  " Enable syntax highlighting
 set shiftwidth=4  " Set number of spaces for indentation
 set expandtab  " Use spaces instead of tabs
