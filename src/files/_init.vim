@@ -73,6 +73,9 @@ syntax on  " Enable syntax highlighting
 set shiftwidth=4  " Set number of spaces for indentation
 set expandtab  " Use spaces instead of tabs
 set tabstop=4  " Number of spaces a <Tab> counts for
+set softtabstop=4
+set autoindent
+set smartindent
 set cursorline  " Highlight the current line
 set incsearch  " Enable incremental search
 set hlsearch  " Highlight search results
@@ -127,3 +130,4 @@ endif
 colorscheme gruvbox
 " }}}
 
+autocmd BufWritePre *.fs,*.fsx,*.fsi %s/\t/    /ge
